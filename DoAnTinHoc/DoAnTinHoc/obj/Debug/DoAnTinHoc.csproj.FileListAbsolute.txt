@@ -1,0 +1,11 @@
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\DoAnTinHoc\DoAnTinHoc\bin\Debug\DoAnTinHoc.exe.config
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\DoAnTinHoc\DoAnTinHoc\bin\Debug\DoAnTinHoc.exe
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\DoAnTinHoc\DoAnTinHoc\bin\Debug\DoAnTinHoc.pdb
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.csproj.AssemblyReference.cache
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.From.resources
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.Properties.Resources.resources
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.csproj.GenerateResource.cache
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.csproj.CoreCompileInputs.cache
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.exe
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.pdb
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.exe.config
