@@ -21,126 +21,125 @@ namespace DoAnTinHoc_HK1_2025_2026
         }
 
         // Hàm hỗ trợ lấy khóa chính
-        private int GetKey(CustomerRecord record)
+        private int LayKhoa(CustomerRecord record)
         {
             return KeySelector(record);
         }
 
-        // --- HỖ TRỢ CÂN BẰNG ---
-        private int GetHeight(AVLNode node) => (node == null) ? 0 : node.Height;
+        // --- CÂN BẰNG ---
+        private int LayChieuCao(AVLNode node)
+        {
+            return (node == null) ? 0 : node.Height;
+        }
 
-        private void UpdateHeight(AVLNode node)
+        private void CapNhatChieuCao(AVLNode node)
         {
             if (node != null)
             {
-                node.Height = 1 + Math.Max(GetHeight(node.Left), GetHeight(node.Right));
+                node.Height = 1 + Math.Max(LayChieuCao(node.Left), LayChieuCao(node.Right));
             }
         }
 
-        private int GetBalanceFactor(AVLNode node) => (node == null) ? 0 : GetHeight(node.Left) - GetHeight(node.Right);
+        // kiểm tra cân bằng tại nút
+        private int KTCanBang(AVLNode node)
+        {
+            if (node == null)
+                return 0;
+            return LayChieuCao(node.Left) - LayChieuCao(node.Right);
+        }
 
         // --- CÁC PHÉP QUAY (ROTATIONS) ---
-        private AVLNode RotateRight(AVLNode y)
+        private AVLNode QuayPhai(AVLNode y)
         {
             AVLNode x = y.Left;
             AVLNode T2 = x.Right;
             x.Right = y;
             y.Left = T2;
-            UpdateHeight(y);
-            UpdateHeight(x);
+            CapNhatChieuCao(y);
+            CapNhatChieuCao(x);
             return x;
         }
 
-        private AVLNode RotateLeft(AVLNode x)
+        private AVLNode QuayTrai(AVLNode x)
         {
             AVLNode y = x.Right;
             AVLNode T2 = y.Left;
             y.Left = x;
             x.Right = T2;
-            UpdateHeight(x);
-            UpdateHeight(y);
+            CapNhatChieuCao(x);
+            CapNhatChieuCao(y);
             return y;
         }
 
         // --- CHÈN (INSERT) KHÓA 2 CẤP ---
-
-        public void Insert(CustomerRecord record)
+        private AVLNode CanBang(AVLNode node)
         {
-            Root = Insert(Root, record);
+            CapNhatChieuCao(node);
+            int balance = KTCanBang(node);
+            // Trường hợp 1: lệch trái trái
+            if (balance > 1 && KTCanBang(node.Left) >= 0)
+                return QuayPhai(node);
+            // Trường hợp 2:lệch phải phải
+            if (balance < -1 && KTCanBang(node.Right) <= 0)
+                return QuayTrai(node);
+            // Trường hợp 3: lệch trái phải
+            if (balance > 1 && KTCanBang(node.Left) < 0)
+            {
+                node.Left = QuayTrai(node.Left);
+                return QuayPhai(node);
+            }
+            // Trường hợp 4: lệch phải trái
+            if (balance < -1 && KTCanBang(node.Right) > 0)
+            {
+                node.Right = QuayPhai(node.Right);
+                return QuayTrai(node);
+            }
+            return node;
         }
 
-        private AVLNode Insert(AVLNode node, CustomerRecord record)
+        public void Chen(CustomerRecord record)
+        {
+            Root = Chen(Root, record);
+        }
+
+        private AVLNode Chen(AVLNode node, CustomerRecord record)
         {
             if (node == null)
                 return new AVLNode(record);
 
-            int recordKey = GetKey(record);
-            int nodeKey = GetKey(node.Data);
+            int recordKey = LayKhoa(record);
+            int nodeKey = LayKhoa(node.Data);
 
             // 1. So sánh Cấp 1 (Khóa Chính Linh hoạt)
             if (recordKey < nodeKey)
             {
-                node.Left = Insert(node.Left, record);
+                node.Left = Chen(node.Left, record);
             }
             else if (recordKey > nodeKey)
             {
-                node.Right = Insert(node.Right, record);
+                node.Right = Chen(node.Right, record);
             }
             else // Khóa Chính trùng
             {
-                // 2. So sánh Cấp 2 (CustomerID)
-                if (record.CustomerID < node.Data.CustomerID)
-                    node.Left = Insert(node.Left, record);
-                else if (record.CustomerID > node.Data.CustomerID)
-                    node.Right = Insert(node.Right, record);
-                else
-                    return node; // ID trùng (trùng lặp hoàn toàn)
+                return null; // Không chèn bản ghi có khóa chính trùng
             }
-
-            // Cập nhật chiều cao
-            UpdateHeight(node);
-
-            // Cân bằng
-            int balance = GetBalanceFactor(node);
-
-            // Trường hợp 1: Left Left Case (Nút con trái lệch trái hoặc cân bằng)
-            if (balance > 1 && GetBalanceFactor(node.Left) >= 0) // >= 0: Bao gồm cả trường hợp chèn vào nhánh trái của nút con trái và trường hợp chèn vào nút có khóa trùng
-                return RotateRight(node);
-
-            // Trường hợp 2: Right Right Case (Nút con phải lệch phải hoặc cân bằng)
-            if (balance < -1 && GetBalanceFactor(node.Right) <= 0) // <= 0: Bao gồm cả trường hợp chèn vào nhánh phải của nút con phải và trường hợp chèn vào nút có khóa trùng
-                return RotateLeft(node);
-
-            // Trường hợp 3: Left Right Case
-            if (balance > 1 && GetBalanceFactor(node.Left) < 0)
-            {
-                node.Left = RotateLeft(node.Left);
-                return RotateRight(node);
-            }
-
-            // Trường hợp 4: Right Left Case
-            if (balance < -1 && GetBalanceFactor(node.Right) > 0)
-            {
-                node.Right = RotateRight(node.Right);
-                return RotateLeft(node);
-            }
-
-            return node;
+            AVLNode aVLNode = CanBang(node);
+            return aVLNode;
         }
 
-        // --- TÌM KIẾM (SEARCH) LINH HOẠT ---
+        // --- TÌM KIẾM (SEARCH) ---
 
-        public CustomerRecord Search(int keyValue)
+        public CustomerRecord TimKiem(int keyValue)
         {
-            return Search(Root, keyValue);
+            return TimKiem(Root, keyValue);
         }
 
-        private CustomerRecord Search(AVLNode node, int keyValue)
+        private CustomerRecord TimKiem(AVLNode node, int keyValue)
         {
             if (node == null)
                 return null;
 
-            int nodeKey = GetKey(node.Data);
+            int nodeKey = LayKhoa(node.Data);
 
             if (keyValue == nodeKey)
             {
@@ -148,13 +147,13 @@ namespace DoAnTinHoc_HK1_2025_2026
             }
 
             if (keyValue < nodeKey)
-                return Search(node.Left, keyValue);
+                return TimKiem(node.Left, keyValue);
             else
-                return Search(node.Right, keyValue);
+                return TimKiem(node.Right, keyValue);
         }
 
         // --- TÌM KIẾM MIN (Hỗ trợ Xóa) ---
-        private AVLNode FindMin(AVLNode node)
+        private AVLNode TimMin(AVLNode node)
         {
             AVLNode current = node;
             while (current.Left != null)
@@ -164,35 +163,35 @@ namespace DoAnTinHoc_HK1_2025_2026
             return current;
         }
 
-        // --- XÓA (DELETE) KHÓA 2 CẤP ---
+        // --- XÓA (DELETE) ---
 
-        public void Delete(int primaryKey, int secondaryID)
+        public void Xoa(int primaryKey, int secondaryID)
         {
-            Root = Delete(Root, primaryKey, secondaryID);
+            Root = Xoa(Root, primaryKey, secondaryID);
         }
 
-        private AVLNode Delete(AVLNode node, int primaryKey, int secondaryID)
+        private AVLNode Xoa(AVLNode node, int primaryKey, int secondaryID)
         {
             if (node == null)
                 return node;
 
-            int nodeKey = GetKey(node.Data);
+            int nodeKey = LayKhoa(node.Data);
 
             // 1. Tìm kiếm nút cần xóa (2 cấp)
             if (primaryKey < nodeKey)
             {
-                node.Left = Delete(node.Left, primaryKey, secondaryID);
+                node.Left = Xoa(node.Left, primaryKey, secondaryID);
             }
             else if (primaryKey > nodeKey)
             {
-                node.Right = Delete(node.Right, primaryKey, secondaryID);
+                node.Right = Xoa(node.Right, primaryKey, secondaryID);
             }
             else // primaryKey == nodeKey
             {
                 if (secondaryID < node.Data.CustomerID)
-                    node.Left = Delete(node.Left, primaryKey, secondaryID);
+                    node.Left = Xoa(node.Left, primaryKey, secondaryID);
                 else if (secondaryID > node.Data.CustomerID)
-                    node.Right = Delete(node.Right, primaryKey, secondaryID);
+                    node.Right = Xoa(node.Right, primaryKey, secondaryID);
                 else // Đã tìm thấy nút chính xác (Xóa BST)
                 {
                     // 0 hoặc 1 con
@@ -204,10 +203,10 @@ namespace DoAnTinHoc_HK1_2025_2026
                     // 2 con
                     else
                     {
-                        AVLNode temp = FindMin(node.Right);
+                        AVLNode temp = TimMin(node.Right);
                         node.Data = temp.Data;
                         // Xóa nút kế thừa (dùng 2 khóa)
-                        node.Right = Delete(node.Right, GetKey(temp.Data), temp.Data.CustomerID);
+                        node.Right = Xoa(node.Right, LayKhoa(temp.Data), temp.Data.CustomerID);
                     }
                 }
             }
@@ -215,25 +214,9 @@ namespace DoAnTinHoc_HK1_2025_2026
             if (node == null)
                 return node;
 
-            // 2. Cập nhật chiều cao và Cân bằng
-            UpdateHeight(node);
-            int balance = GetBalanceFactor(node);
+            AVLNode aVLNode = CanBang(node);
+            return aVLNode;
 
-            // Cân bằng (giữ nguyên logic chuẩn của AVL sau khi xóa)
-            if (balance > 1 && GetBalanceFactor(node.Left) >= 0) return RotateRight(node);
-            if (balance > 1 && GetBalanceFactor(node.Left) < 0)
-            {
-                node.Left = RotateLeft(node.Left);
-                return RotateRight(node);
-            }
-            if (balance < -1 && GetBalanceFactor(node.Right) <= 0) return RotateLeft(node);
-            if (balance < -1 && GetBalanceFactor(node.Right) > 0)
-            {
-                node.Right = RotateRight(node.Right);
-                return RotateLeft(node);
-            }
-
-            return node;
         }
 
 
@@ -256,7 +239,7 @@ namespace DoAnTinHoc_HK1_2025_2026
             }
         }
 
-        public int GetTreeHeight() => GetHeight(Root);
+        public int GetTreeHeight() => LayChieuCao(Root);
         public int CountNodes() => CountNodesRecursive(Root);
 
         private int CountNodesRecursive(AVLNode node) =>

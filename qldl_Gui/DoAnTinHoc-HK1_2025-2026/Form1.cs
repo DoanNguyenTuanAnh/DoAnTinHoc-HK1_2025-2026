@@ -109,7 +109,7 @@ namespace DoAnTinHoc_HK1_2025_2026
                         );
 
                         // 3. Chèn vào Cây AVL mới
-                        customerTree.Insert(record);
+                        customerTree.Chen(record);
                     }
                 }
 
@@ -131,9 +131,6 @@ namespace DoAnTinHoc_HK1_2025_2026
             RefreshDataGrid();
             UpdateStats();
         }
-
-        // --- HÀM LÀM MỚI DATAGRIDVIEW ---
-
         private void RefreshDataGrid()
         {
             if (customerTree == null) return;
@@ -141,8 +138,6 @@ namespace DoAnTinHoc_HK1_2025_2026
             dgvCustomers.DataSource = null;
             dgvCustomers.DataSource = allRecords;
         }
-
-       
         private void HighlightRecord(int searchID)
         {
             // 1. Đảm bảo DataGridView đã có dữ liệu và có cột CustomerID
@@ -150,7 +145,6 @@ namespace DoAnTinHoc_HK1_2025_2026
             {
                 return;
             }
-
             // 2. Tìm chỉ mục (index) của cột CustomerID
             int idColumnIndex = -1;
             // Tìm cột bằng tên thuộc tính (CustomerID) của CustomerRecord
@@ -197,9 +191,6 @@ namespace DoAnTinHoc_HK1_2025_2026
                     }
                 }
             }
-
-            // (Tùy chọn) Nếu không tìm thấy, có thể hiển thị thông báo.
-            // Tuy nhiên, hàm tìm kiếm đã báo cáo, nên bước này có thể bỏ qua.
         }
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
@@ -208,16 +199,10 @@ namespace DoAnTinHoc_HK1_2025_2026
                 MessageBox.Show("Vui lòng nhập ID hợp lệ.", "Lỗi nhập liệu");
                 return;
             }
-
-            CustomerRecord foundRecord = customerTree.Search(searchID);
-
+            CustomerRecord foundRecord = customerTree.TimKiem(searchID);
             if (foundRecord != null)
             {
-                // Tùy chọn: Hiển thị thông tin tìm thấy lên các TextBox khác (ví dụ: txtAge, txtCategory)
-                // txtInputAge.Text = foundRecord.Age.ToString();
-
                 MessageBox.Show($"Tìm thấy khách hàng ID {searchID}: Category = {foundRecord.Category}.", "Tìm kiếm thành công");
-
                 HighlightRecord(searchID);
             }
             else
@@ -232,43 +217,28 @@ namespace DoAnTinHoc_HK1_2025_2026
                 MessageBox.Show("Vui lòng tải dữ liệu trước.", "Lỗi");
                 return;
             }
-
-            // 1. Lấy ID Phụ (CustomerID) và Khóa Chính (Age, PurchaseAmount,...)
-            // Cần 2 TextBox hoặc cơ chế chọn hàng để lấy 2 giá trị này
             if (!int.TryParse(txtInputID.Text, out int primaryKey))
             {
                 MessageBox.Show("Vui lòng nhập giá trị Khóa Chính (Key Value) hợp lệ.", "Lỗi nhập liệu");
                 return;
             }
-
-            // Lấy ID từ bản ghi đầu tiên có khóa trùng (Giả định đơn giản cho mục đích demo)
-            CustomerRecord recordToDelete = customerTree.Search(primaryKey);
+            CustomerRecord recordToDelete = customerTree.TimKiem(primaryKey);
             if (recordToDelete == null)
             {
                 MessageBox.Show($"Không tìm thấy bản ghi có Khóa Chính = {primaryKey} để xóa.", "Lỗi xóa");
                 return;
             }
-
-            int secondaryID = recordToDelete.CustomerID; // Lấy ID duy nhất của bản ghi đầu tiên
-
-            // Hỏi xác nhận
+            int secondaryID = recordToDelete.CustomerID; 
             if (MessageBox.Show($"Bạn có chắc chắn muốn xóa khách hàng ID: {secondaryID} (Khóa Chính: {primaryKey}) không?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 return;
             }
-
-            // 2. Thực hiện xóa trong Cây AVL (Cần cả 2 khóa)
-            customerTree.Delete(primaryKey, secondaryID);
-
-            // 3. Cập nhật giao diện
+            customerTree.Xoa(primaryKey, secondaryID);
             RefreshDataGrid();
             UpdateStats();
-
             MessageBox.Show($"Đã xóa thành công Khách hàng ID {secondaryID}.", "Xóa thành công");
         
         }
-        // Trong lớp Form1.cs
-
         private void UpdateStats()
         {
             if (customerTree.CountNodes() > 0)
@@ -290,7 +260,6 @@ namespace DoAnTinHoc_HK1_2025_2026
                 lblLeafNodes.Text = "Số Nút Lá: 0";
             }
         }
-        // Đặt đoạn này trong lớp Form1
         private void InitializeKeySelectorComboBox()
         {
             // 1. Nạp các tên khóa (Keys) từ Dictionary vào ComboBox

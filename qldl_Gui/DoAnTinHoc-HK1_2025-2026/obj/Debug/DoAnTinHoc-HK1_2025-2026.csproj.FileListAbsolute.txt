@@ -9,3 +9,14 @@ C:\LapTrinh\qldl_Gui\DoAnTinHoc-HK1_2025-2026\obj\Debug\DoAnTinHoc-HK1_2025-2026
 C:\LapTrinh\qldl_Gui\DoAnTinHoc-HK1_2025-2026\obj\Debug\DoAnTinHoc-HK1_2025-2026.exe
 C:\LapTrinh\qldl_Gui\DoAnTinHoc-HK1_2025-2026\obj\Debug\DoAnTinHoc-HK1_2025-2026.pdb
 C:\LapTrinh\qldl_Gui\DoAnTinHoc-HK1_2025-2026\obj\Debug\DoAnTinHoc-HK1_2025-2026.exe.config
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\qldl_Gui\DoAnTinHoc-HK1_2025-2026\bin\Debug\DoAnTinHoc-HK1_2025-2026.exe.config
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\qldl_Gui\DoAnTinHoc-HK1_2025-2026\bin\Debug\DoAnTinHoc-HK1_2025-2026.exe
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\qldl_Gui\DoAnTinHoc-HK1_2025-2026\bin\Debug\DoAnTinHoc-HK1_2025-2026.pdb
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\qldl_Gui\DoAnTinHoc-HK1_2025-2026\obj\Debug\DoAnTinHoc-HK1_2025-2026.csproj.AssemblyReference.cache
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\qldl_Gui\DoAnTinHoc-HK1_2025-2026\obj\Debug\DoAnTinHoc-HK1_2025-2026.exe.config
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\qldl_Gui\DoAnTinHoc-HK1_2025-2026\obj\Debug\DoAnTinHoc_HK1_2025_2026.Form1.resources
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\qldl_Gui\DoAnTinHoc-HK1_2025-2026\obj\Debug\DoAnTinHoc_HK1_2025_2026.Properties.Resources.resources
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\qldl_Gui\DoAnTinHoc-HK1_2025-2026\obj\Debug\DoAnTinHoc-HK1_2025-2026.csproj.GenerateResource.cache
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\qldl_Gui\DoAnTinHoc-HK1_2025-2026\obj\Debug\DoAnTinHoc-HK1_2025-2026.csproj.CoreCompileInputs.cache
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\qldl_Gui\DoAnTinHoc-HK1_2025-2026\obj\Debug\DoAnTinHoc-HK1_2025-2026.exe
+C:\GitHub\DoanNguyenTuanAnh\DoAnTinHoc-HK1_2025-2026\qldl_Gui\DoAnTinHoc-HK1_2025-2026\obj\Debug\DoAnTinHoc-HK1_2025-2026.pdb
