@@ -9,7 +9,7 @@ namespace DoAnTinHoc_HK1_2025_2026
 {
     internal class AVLTree
     {
-        private AVLNode Root { get; set; }
+        public AVLNode Root { get; private set; }
 
         // Delegate (Func) để lấy KHÓA CHÍNH (int) từ CustomerRecord
         public Func<CustomerRecord, int> KeySelector { get; private set; }
@@ -188,17 +188,21 @@ namespace DoAnTinHoc_HK1_2025_2026
             }
             else // primaryKey == nodeKey
             {
-                if (secondaryID < node.Data.CustomerID)
+                if (secondaryID < node.Data.ID)
                     node.Left = Xoa(node.Left, primaryKey, secondaryID);
-                else if (secondaryID > node.Data.CustomerID)
+                else if (secondaryID > node.Data.ID)
                     node.Right = Xoa(node.Right, primaryKey, secondaryID);
                 else // Đã tìm thấy nút chính xác (Xóa BST)
                 {
                     // 0 hoặc 1 con
                     if (node.Left == null || node.Right == null)
                     {
-                        AVLNode temp = (node.Left != null) ? node.Left : node.Right;
-                        node = temp;
+                        AVLNode temp;
+                        if (node.Left != null)
+                            temp = node.Left;
+                        else
+                            temp = node.Right;  
+                        node=temp;
                     }
                     // 2 con
                     else
@@ -206,52 +210,75 @@ namespace DoAnTinHoc_HK1_2025_2026
                         AVLNode temp = TimMin(node.Right);
                         node.Data = temp.Data;
                         // Xóa nút kế thừa (dùng 2 khóa)
-                        node.Right = Xoa(node.Right, LayKhoa(temp.Data), temp.Data.CustomerID);
+                        node.Right = Xoa(node.Right, LayKhoa(temp.Data), temp.Data.ID);
                     }
                 }
             }
-
-            if (node == null)
-                return node;
-
             AVLNode aVLNode = CanBang(node);
             return aVLNode;
-
         }
-
-
-        // --- DUYỆT CÂY & THỐNG KÊ (Giữ nguyên) ---
+        // --- DUYỆT CÂY & THỐNG KÊ ) ---
 
         public List<CustomerRecord> GetAllRecords()
         {
             List<CustomerRecord> records = new List<CustomerRecord>();
-            InorderTraversal(Root, records);
+            LNR(Root, records);
             return records;
         }
 
-        private void InorderTraversal(AVLNode node, List<CustomerRecord> records)
+        private void LNR(AVLNode node, List<CustomerRecord> records)
         {
             if (node != null)
             {
-                InorderTraversal(node.Left, records);
+                LNR(node.Left, records);
                 records.Add(node.Data);
-                InorderTraversal(node.Right, records);
+                LNR(node.Right, records);
             }
         }
 
-        public int GetTreeHeight() => LayChieuCao(Root);
-        public int CountNodes() => CountNodesRecursive(Root);
+        public int DemChieuCao() => LayChieuCao(Root);
+        public int DemNode() => LayNode(Root);
 
-        private int CountNodesRecursive(AVLNode node) =>
-            (node == null) ? 0 : 1 + CountNodesRecursive(node.Left) + CountNodesRecursive(node.Right);
+        private int LayNode(AVLNode node)
+        {
+            if(node == null) return 0;
+            return 1 + LayNode(node.Left) + LayNode(node.Right);
+        }
 
-        public int CountLeafNodes() => CountLeafNodesRecursive(Root);
+        public int DemNutLa() => LayNutLa(Root);
 
-        private int CountLeafNodesRecursive(AVLNode node)
+        private int LayNutLa(AVLNode node)
         {
             if (node == null) return 0;
             if (node.Left == null && node.Right == null) return 1;
-            return CountLeafNodesRecursive(node.Left) + CountLeafNodesRecursive(node.Right);
+            return LayNutLa(node.Left) + LayNutLa(node.Right);
         }
+        
+        public int DemSoNutTangK(int k) => LaySoNutTangK(Root, k);
+        private int LaySoNutTangK(AVLNode node,int k)
+        {
+            if (node == null) return 0;
+            
+            if (k == 0)
+                return 1;
+            return  LaySoNutTangK(node.Left,k-1) + LaySoNutTangK(node.Right, k-1);
+        }
+        public int DemSoButBenTrai() => LaySoNutBenTrai(Root);
+        private int LaySoNutBenTrai(AVLNode node)
+        {
+            if (node == null) return 0;
+
+            int count = 0;
+
+            // Nếu có con trái thì tính là một nút bên trái
+            if (node.Left != null)
+                count++;
+
+            // Đệ quy xuống cả trái và phải
+            count += LaySoNutBenTrai(node.Left);
+            count += LaySoNutBenTrai(node.Right);
+
+            return count;
+        }      
     }
 }

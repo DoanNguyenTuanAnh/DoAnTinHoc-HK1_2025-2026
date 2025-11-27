@@ -3,15 +3,19 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+using System.Globalization;    
 
     namespace DoAnTinHoc_HK1_2025_2026
     {
         public enum CGender { Male, Female }
+        public enum CSubscriptionStatus { Yes, No }
+        public enum CDiscountApplied { Yes, No }
+        public enum CPromoCodeUsed {  Yes, No }
 
         [Serializable]
-        internal class CustomerRecord
+        public class CustomerRecord
         {
-            public int CustomerID { get; set; }
+            public int ID { get; set; }
             public int Age { get; set; }
             public CGender Gender { get; set; }
             public string ItemPurchased { get; set; }
@@ -22,21 +26,21 @@
             public string Color { get; set; }
             public string Season { get; set; }
             public float ReviewRating { get; set; }
-            public string SubscriptionStatus { get; set; }
+            public CSubscriptionStatus SubscriptionStatus { get; set; }
             public string ShippingType { get; set; }
-            public string DiscountApplied { get; set; }
-            public string PromoCodeUsed { get; set; }
+            public CDiscountApplied DiscountApplied { get; set; }
+            public CPromoCodeUsed PromoCodeUsed { get; set; }
             public int PreviousPurchases { get; set; }
             public string PaymentMethod { get; set; }
             public string FrequencyOfPurchases { get; set; }
             public CustomerRecord(int customerID, int age, CGender gender,
                 string itemPurchased, string category, int purchaseAmount,
                 string location, string size, string color, string season,
-                float reviewRating, string subscriptionStatus, string shippingType,
-                string discountApplied, string promoCodeUsed, int previousPurchases,
+                float reviewRating, CSubscriptionStatus subscriptionStatus, string shippingType,
+                CDiscountApplied discountApplied, CPromoCodeUsed promoCodeUsed, int previousPurchases,
                 string paymentMethod, string frequencyOfPurchases)
             {
-                CustomerID = customerID;
+                ID = customerID;
                 Age = age;
                 Gender = gender;
                 ItemPurchased = itemPurchased;
@@ -56,9 +60,32 @@
                 FrequencyOfPurchases = frequencyOfPurchases;
             }
 
-            public CustomerRecord() : this(0, 0, CGender.Female, "", "", 0, "", "", "", "", 0, "", "", "", "", 0, "", "")
+            public CustomerRecord() : this(0, 0, CGender.Female, "", "", 0, "", "", "", "", 0, CSubscriptionStatus.Yes, "", CDiscountApplied.Yes, CPromoCodeUsed.Yes, 0, "", "")
             {
             }
+
+       
+        public string ToCsvString()
+        {
             
+            return $"{ID}," +
+                   $"{Age}," +
+                   $"{Gender.ToString().ToLower()}," + // Male/Female
+                   $"{ItemPurchased}," +
+                   $"{Category}," +
+                   $"{PurchaseAmount}," +
+                   $"{Location}," +
+                   $"{Size}," +
+                   $"{Color}," +
+                   $"{Season}," +
+                   $"{ReviewRating.ToString(CultureInfo.InvariantCulture)}," + // Dấu chấm cho số thập phân
+                   $"{SubscriptionStatus.ToString().ToLower()}," + // Yes/No
+                   $"{ShippingType}," +
+                   $"{DiscountApplied.ToString().ToLower()}," + // Yes/No
+                   $"{PromoCodeUsed.ToString().ToLower()}," + // Yes/No
+                   $"{PreviousPurchases}," +
+                   $"{PaymentMethod}," +
+                   $"{FrequencyOfPurchases}";
         }
+    }
     }
