@@ -1,0 +1,242 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\LapTrinh\\DoAnTinHoc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\LapTrinh\\DoAnTinHoc\\doantinhoc\\qlavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\qlavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\LapTrinh\\DoAnTinHoc\\doantinhoc\\qlavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\qlavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|c:\\laptrinh\\doantinhoc\\doantinhoc\\qldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\qldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\LapTrinh\\DoAnTinHoc\\doantinhoc\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\LapTrinh\\DoAnTinHoc\\doantinhoc\\singlynode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\singlynode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\LapTrinh\\DoAnTinHoc\\doantinhoc\\avltree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\avltree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\LapTrinh\\DoAnTinHoc\\doantinhoc\\truycap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\truycap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\LapTrinh\\DoAnTinHoc\\doantinhoc\\vecay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\vecay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\LapTrinh\\DoAnTinHoc\\doantinhoc\\vecay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\vecay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\LapTrinh\\DoAnTinHoc\\doantinhoc\\avlnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\avlnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\LapTrinh\\DoAnTinHoc\\doantinhoc\\customerrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\customerrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\LapTrinh\\DoAnTinHoc\\doantinhoc\\qldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\qldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\LapTrinh\\DoAnTinHoc\\doantinhoc\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\Form1.cs",
+              "RelativeDocumentMoniker": "DoAnTinHoc\\Form1.cs",
+              "ToolTip": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\Form1.cs [Design]",
+              "RelativeToolTip": "DoAnTinHoc\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T12:41:00.607Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QLAVL.cs [Design]",
+              "DocumentMoniker": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\QLAVL.cs",
+              "RelativeDocumentMoniker": "DoAnTinHoc\\QLAVL.cs",
+              "ToolTip": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\QLAVL.cs [Design]",
+              "RelativeToolTip": "DoAnTinHoc\\QLAVL.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T12:42:19.772Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QLData.cs [Design]",
+              "DocumentMoniker": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\QLData.cs",
+              "RelativeDocumentMoniker": "DoAnTinHoc\\QLData.cs",
+              "ToolTip": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\QLData.cs [Design]",
+              "RelativeToolTip": "DoAnTinHoc\\QLData.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T15:11:58.649Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VeCay.cs [Design]",
+              "DocumentMoniker": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\VeCay.cs",
+              "RelativeDocumentMoniker": "DoAnTinHoc\\VeCay.cs",
+              "ToolTip": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\VeCay.cs [Design]",
+              "RelativeToolTip": "DoAnTinHoc\\VeCay.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T15:27:30.3Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\Form1.cs",
+              "RelativeDocumentMoniker": "DoAnTinHoc\\Form1.cs",
+              "ToolTip": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\Form1.cs",
+              "RelativeToolTip": "DoAnTinHoc\\Form1.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAMwCEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T12:41:13.863Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QLAVL.cs",
+              "DocumentMoniker": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\QLAVL.cs",
+              "RelativeDocumentMoniker": "DoAnTinHoc\\QLAVL.cs",
+              "ToolTip": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\QLAVL.cs",
+              "RelativeToolTip": "DoAnTinHoc\\QLAVL.cs",
+              "ViewState": "AgIAAIcBAAAAAAAAAAAAAIcBAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T15:06:19.276Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "QLData.cs",
+              "DocumentMoniker": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\QLData.cs",
+              "RelativeDocumentMoniker": "DoAnTinHoc\\QLData.cs",
+              "ToolTip": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\QLData.cs",
+              "RelativeToolTip": "DoAnTinHoc\\QLData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T15:12:31.733Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VeCay.cs",
+              "DocumentMoniker": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\VeCay.cs",
+              "RelativeDocumentMoniker": "DoAnTinHoc\\VeCay.cs",
+              "ToolTip": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\VeCay.cs",
+              "RelativeToolTip": "DoAnTinHoc\\VeCay.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAowIYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T15:27:40.953Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CustomerRecord.cs",
+              "DocumentMoniker": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\CustomerRecord.cs",
+              "RelativeDocumentMoniker": "DoAnTinHoc\\CustomerRecord.cs",
+              "ToolTip": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\CustomerRecord.cs",
+              "RelativeToolTip": "DoAnTinHoc\\CustomerRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T12:44:35.085Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TruyCap.cs",
+              "DocumentMoniker": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\TruyCap.cs",
+              "RelativeDocumentMoniker": "DoAnTinHoc\\TruyCap.cs",
+              "ToolTip": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\TruyCap.cs",
+              "RelativeToolTip": "DoAnTinHoc\\TruyCap.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAkwJMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T14:53:37.843Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AVLTree.cs",
+              "DocumentMoniker": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\AVLTree.cs",
+              "RelativeDocumentMoniker": "DoAnTinHoc\\AVLTree.cs",
+              "ToolTip": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\AVLTree.cs",
+              "RelativeToolTip": "DoAnTinHoc\\AVLTree.cs",
+              "ViewState": "AgIAAM0BAAAAAAAAAAAAwN8BAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T12:44:57.914Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AVLNode.cs",
+              "DocumentMoniker": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\AVLNode.cs",
+              "RelativeDocumentMoniker": "DoAnTinHoc\\AVLNode.cs",
+              "ToolTip": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\AVLNode.cs",
+              "RelativeToolTip": "DoAnTinHoc\\AVLNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T12:44:47.598Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SinglyNode.cs",
+              "DocumentMoniker": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\SinglyNode.cs",
+              "RelativeDocumentMoniker": "DoAnTinHoc\\SinglyNode.cs",
+              "ToolTip": "C:\\LapTrinh\\DoAnTinHoc\\DoAnTinHoc\\SinglyNode.cs",
+              "RelativeToolTip": "DoAnTinHoc\\SinglyNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T08:52:18.267Z",
+              "IsPinned": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

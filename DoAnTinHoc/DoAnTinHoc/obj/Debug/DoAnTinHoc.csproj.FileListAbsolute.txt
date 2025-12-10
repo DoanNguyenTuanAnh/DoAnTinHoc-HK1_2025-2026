@@ -1,0 +1,14 @@
+C:\LapTrinh\DoAnTinHoc\DoAnTinHoc\bin\Debug\DoAnTinHoc.exe.config
+C:\LapTrinh\DoAnTinHoc\DoAnTinHoc\bin\Debug\DoAnTinHoc.exe
+C:\LapTrinh\DoAnTinHoc\DoAnTinHoc\bin\Debug\DoAnTinHoc.pdb
+C:\LapTrinh\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.csproj.AssemblyReference.cache
+C:\LapTrinh\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.Form1.resources
+C:\LapTrinh\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.QLAVL.resources
+C:\LapTrinh\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.Properties.Resources.resources
+C:\LapTrinh\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.csproj.GenerateResource.cache
+C:\LapTrinh\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.csproj.CoreCompileInputs.cache
+C:\LapTrinh\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.exe
+C:\LapTrinh\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.pdb
+C:\LapTrinh\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.exe.config
+C:\LapTrinh\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.QLData.resources
+C:\LapTrinh\DoAnTinHoc\DoAnTinHoc\obj\Debug\DoAnTinHoc.VeCay.resources
