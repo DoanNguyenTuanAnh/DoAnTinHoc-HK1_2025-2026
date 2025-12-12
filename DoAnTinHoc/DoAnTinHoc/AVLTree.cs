@@ -11,18 +11,18 @@ namespace DoAnTinHoc
     {
         
         public AVLNode Root { get; private set; }
-        private int GetHeight(AVLNode node)
+        private int GetHeight(AVLNode node)//Lấy chiều cao
         {
             return node == null ? 0 : node.Height;
         }
-        private void UpdateHeight(AVLNode node)
+        private void UpdateHeight(AVLNode node)//Cập nhật chiều cao
         {
             if (node != null)
             {
                 node.Height = 1 + Math.Max(GetHeight(node.Left), GetHeight(node.Right));
             }
         }
-        private int GetBalanceFactor(AVLNode node)//Cân bằng
+        private int GetBalanceFactor(AVLNode node)//Kiểm Tra Cân bằng
         {
             if (node == null)
             {
@@ -58,7 +58,30 @@ namespace DoAnTinHoc
 
             return y;
         }
-
+        public AVLNode CanBang(AVLNode node)
+        {
+            UpdateHeight(node);
+            int balance = GetBalanceFactor(node);
+            if (balance > 1 && GetBalanceFactor(node.Left) >= 0)
+            {
+                return RotateRight(node);
+            }
+            if (balance < -1 && GetBalanceFactor(node.Right) <= 0)
+            {
+                return RotateLeft(node);
+            }
+            if (balance > 1 && GetBalanceFactor(node.Left) < 0)
+            {
+                node.Left = RotateLeft(node.Left);
+                return RotateRight(node);
+            }
+            if (balance < -1 && GetBalanceFactor(node.Right) > 0)
+            {
+                node.Right = RotateRight(node.Right);
+                return RotateLeft(node);
+            }
+            return node;
+        }
 
 
         public void Insert(CustomerRecord data)
@@ -102,34 +125,15 @@ namespace DoAnTinHoc
                 }
                 return node;              
             }
-            UpdateHeight(node);
-            int balance = GetBalanceFactor(node);
-            if (balance > 1 && data.ID < node.Left.Data.ID)
-            {
-                return RotateRight(node);
-            }
-            if (balance < -1 && data.ID > node.Right.Data.ID)
-            {
-                return RotateLeft(node);
-            }
-            if (balance > 1 && data.ID > node.Left.Data.ID)
-            {
-                node.Left = RotateLeft(node.Left);
-                return RotateRight(node);
-            }
-            if (balance < -1 && data.ID < node.Right.Data.ID)
-            {
-                node.Right = RotateRight(node.Right);
-                return RotateLeft(node);
-            }
-            return node;
+            AVLNode balancedNode = CanBang(node);
+            return balancedNode;
         }
         public CustomerRecord Search(int key)
         {
             return Search(Root, key);
         }
 
-        private CustomerRecord Search(AVLNode node, int key)
+        private CustomerRecord Search(AVLNode node, int key)//Tìm kiếm bản ghi theo key
         {
             if (node == null)
             {
@@ -148,52 +152,23 @@ namespace DoAnTinHoc
                 return node.Data;
             }
         }
-        public List<CustomerRecord> SearchAll(int key)
+        public AVLNode FindNode(int key)//Tìm nút AVLNode theo key
         {
-            return SearchAllRecursive(Root, key);
+            return FindNodeRecursive(Root, key);
         }
 
-        private List<CustomerRecord> SearchAllRecursive(AVLNode node, int key)
+        private AVLNode FindNodeRecursive(AVLNode node, int key)//Hàm đệ quy tìm nút AVLNode theo key
         {
-            if (node == null)
-            {
-                return new List<CustomerRecord>(); // Trả về danh sách rỗng nếu không tìm thấy
-            }
+            if (node == null) return null;
             if (key < node.Data.ID)
-            {
-                return SearchAllRecursive(node.Left, key);
-            }
+                return FindNodeRecursive(node.Left, key);
             else if (key > node.Data.ID)
-            {
-                return SearchAllRecursive(node.Right, key);
-            }
+                return FindNodeRecursive(node.Right, key);
             else
-            {
-                // Nút có ID trùng khớp được tìm thấy (node.Data.ID == key)
-                List<CustomerRecord> result = new List<CustomerRecord>();
+                return node; // Trả về nút AVLNode
+        }
+       
 
-                // 1. Thêm bản ghi chính
-                result.Add(node.Data);
-
-                // 2. Thêm tất cả các bản ghi trùng lặp từ DuplicatesHead
-                SinglyNode current = node.DuplicatesHead;
-                while (current != null)
-                {
-                    result.Add(current.Data);
-                    current = current.Next;
-                }
-                return result; // Trả về danh sách chứa tất cả các bản ghi trùng ID
-            }
-        }
-        private AVLNode FindMinNode(AVLNode node)
-        {
-            AVLNode current = node;
-            while (current.Left != null)
-            {
-                current = current.Left;
-            }
-            return current;
-        }
         // Hàm hỗ trợ để đếm số lượng bản ghi trong danh sách liên kết
         private int CountDuplicates(AVLNode node)
         {
@@ -205,6 +180,16 @@ namespace DoAnTinHoc
                 current = current.Next;
             }
             return count;
+        }
+        // Hàm hỗ trợ để tìm nút có giá trị nhỏ nhất trong cây con
+        private AVLNode FindMinNode(AVLNode node)
+        {
+            AVLNode current = node;
+            while (current.Left != null)
+            {
+                current = current.Left;
+            }
+            return current;
         }
         public void Delete(int key)
         {
@@ -260,115 +245,30 @@ namespace DoAnTinHoc
                     }
                 }
             }
-
             // 4. Cân bằng lại cây 
-            if (node == null)
-            {
-                return node;
-            }
-            UpdateHeight(node);
-            int balance = GetBalanceFactor(node);
-
-            if (balance > 1 && GetBalanceFactor(node.Left) >= 0)
-            {
-                return RotateRight(node);
-            }
-            if (balance > 1 && GetBalanceFactor(node.Left) < 0)
-            {
-                node.Left = RotateLeft(node.Left);
-                return RotateRight(node);
-            }
-            if (balance < -1 && GetBalanceFactor(node.Right) <= 0)
-            {
-                return RotateLeft(node);
-            }
-            if (balance < -1 && GetBalanceFactor(node.Right) > 0)
-            {
-                node.Right = RotateRight(node.Right);
-                return RotateLeft(node);
-            }
-            return node;
+            AVLNode balancedNode = CanBang(node);
+            return balancedNode;
         }
-        public void DisplayNodesAtLevel(int k)
+       
+        public void Clear()//Xóa toàn bộ cây
         {
-            if (k <= 0)
-            {
-                Console.WriteLine("Tầng phải là số dương (bắt đầu từ 1).");
-                return;
-            }
-            if (Root == null)
-            {
-                Console.WriteLine("Cây rỗng.");
-                return;
-            }
-            Console.Write($"Các nút ở tầng {k}: ");
-            bool found = DisplayNodesAtLevelRecursive(Root, k, 1);
-
-            if (!found)
-            {
-                if (k > GetHeight(Root))
-                {
-                    Console.WriteLine("Tầng này không tồn tại trong cây.");
-                }
-                else
-                {
-                    Console.WriteLine("Không tìm thấy nút nào (Lỗi logic).");
-                }
-            }
-            Console.WriteLine();
+            Root = null;
         }
-
-        private bool DisplayNodesAtLevelRecursive(AVLNode node, int targetLevel, int currentLevel)
-        {
-            if (node == null)
-            {
-                return false;
-            }
-            if (currentLevel == targetLevel)
-            {
-                Console.Write($"{node.Data.ID} ");
-                return true;
-            }
-            if (currentLevel < targetLevel)
-            {
-                bool leftFound = DisplayNodesAtLevelRecursive(node.Left, targetLevel, currentLevel + 1);
-                bool rightFound = DisplayNodesAtLevelRecursive(node.Right, targetLevel, currentLevel + 1);
-
-                return leftFound || rightFound;
-            }
-            return false;
-        }
-        public AVLNode FindNode(int key)
-        {
-            return FindNodeRecursive(Root, key);
-        }
-
-        private AVLNode FindNodeRecursive(AVLNode node, int key)
-        {
-            if (node == null) return null;
-            if (key < node.Data.ID)
-                return FindNodeRecursive(node.Left, key);
-            else if (key > node.Data.ID)
-                return FindNodeRecursive(node.Right, key);
-            else
-                return node; // Trả về nút AVLNode
-        }
         public int DemChieuCao() => GetHeight(Root);
         public int DemNode() => LayNode(Root);
 
-        private int LayNode(AVLNode node)
+        private int LayNode(AVLNode node)//Đếm số nút trong cây
         {
             if (node == null) return 0;
             return 1 + LayNode(node.Left) + LayNode(node.Right);
         }
-        //Liệt kê ID trung lặp
-        public List<int> GetDuplicateIDs()
+        public List<int> GetDuplicateIDs()//Lấy danh sách ID bị trùng
         {
             List<int> duplicateIDs = new List<int>();
             FindDuplicateIDsRecursive(Root, duplicateIDs);
             return duplicateIDs;
         }
-        private void FindDuplicateIDsRecursive(AVLNode node, List<int> duplicateIDs)
+        private void FindDuplicateIDsRecursive(AVLNode node, List<int> duplicateIDs)//Hàm đệ quy tìm ID bị trùng
         {
             if (node == null) return;
 
@@ -387,7 +287,7 @@ namespace DoAnTinHoc
             // 3. Duyệt cây con bên phải
             FindDuplicateIDsRecursive(node.Right, duplicateIDs);
         }
-        private int CountTotalRecordsInNode(AVLNode node)
+        private int CountTotalRecordsInNode(AVLNode node)//Đếm tổng số bản ghi trong một nút AVLNode
         {
             if (node == null) return 0;
 
@@ -400,12 +300,12 @@ namespace DoAnTinHoc
             }
             return count;
         }
-        public int CountDuplicateNodes()
+        public int CountDuplicateNodes()//Đếm số nút có ID bị trùng
         {
             return CountDuplicateNodesRecursive(Root);
         }
 
-        private int CountDuplicateNodesRecursive(AVLNode node)
+        private int CountDuplicateNodesRecursive(AVLNode node)//Hàm đệ quy đếm số nút có ID bị trùng
         {
             if (node == null)
             {
@@ -422,7 +322,7 @@ namespace DoAnTinHoc
 
             return count;
         }
-        public (int ID, int MaxCount) FindMostDuplicateID()
+        public (int ID, int MaxCount) FindMostDuplicateID()//Tìm ID có số bản ghi trùng nhiều nhất
         {
             int maxID = -1;
             int maxCount = 0;
@@ -432,7 +332,7 @@ namespace DoAnTinHoc
             return (maxID, maxCount);
         }
 
-        private void FindMostDuplicateIDRecursive(AVLNode node, ref int maxID, ref int maxCount)
+        private void FindMostDuplicateIDRecursive(AVLNode node, ref int maxID, ref int maxCount)//Hàm đệ quy tìm ID có số bản ghi trùng nhiều nhất
         {
             if (node == null)
             {
@@ -455,19 +355,14 @@ namespace DoAnTinHoc
             // 3. Duyệt sang phải
             FindMostDuplicateIDRecursive(node.Right, ref maxID, ref maxCount);
         }
-        public void Clear()
-        {
-            Root = null;
-        }
-        public List<CustomerRecord> GetAllDuplicateRecords()
+        
+        public List<CustomerRecord> GetAllDuplicateRecords()//Lấy tất cả các bản ghi trùng lặp trong cây
         {
             List<CustomerRecord> duplicates = new List<CustomerRecord>();
             GetAllDuplicateRecordsRecursive(Root, duplicates);
             return duplicates;
         }
-
-        // Phương thức đệ quy để duyệt cây và thu thập các bản ghi trùng lặp
-        private void GetAllDuplicateRecordsRecursive(AVLNode node, List<CustomerRecord> list)
+        private void GetAllDuplicateRecordsRecursive(AVLNode node, List<CustomerRecord> list)//Hàm đệ quy lấy tất cả các bản ghi trùng lặp trong cây
         {
             if (node == null)
             {

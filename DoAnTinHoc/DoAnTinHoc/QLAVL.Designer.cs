@@ -44,6 +44,8 @@
             this.btnDanhSachIDBitrung = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.dgvList = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAVL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.SuspendLayout();
@@ -198,11 +200,31 @@
             this.dgvList.Size = new System.Drawing.Size(1577, 246);
             this.dgvList.TabIndex = 18;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 195);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 16);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Dữ liệu không bị trùng";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 437);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 16);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Dữ liệu bị trùng";
+            // 
             // QLAVL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1601, 710);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvList);
             this.Controls.Add(this.btnThongKe);
             this.Controls.Add(this.btnDanhSachIDBitrung);
@@ -246,5 +268,7 @@
         private System.Windows.Forms.Button btnDanhSachIDBitrung;
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.DataGridView dgvList;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -58,6 +58,7 @@
             this.ChucNangToolStripMenuItem.Name = "ChucNangToolStripMenuItem";
             this.ChucNangToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
             this.ChucNangToolStripMenuItem.Text = "Chức năng";
+            this.ChucNangToolStripMenuItem.Click += new System.EventHandler(this.ChucNangToolStripMenuItem_Click);
             // 
             // lưuFileToolStripMenuItem
             // 

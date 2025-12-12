@@ -29,7 +29,7 @@ namespace DoAnTinHoc
         public float ReviewRating { get; set; } // Kiểu float
         public CSubscriptionStatus SubscriptionStatus { get; set; }
         public string ShippingType { get; set; }
-        public CDiscountApplied DiscountApplied { get; set; }
+        public CDiscountApplied DiscountApplied { get; set; }   
         public CPromoCodeUsed PromoCodeUsed { get; set; }
         public int PreviousPurchases { get; set; }
         public string PaymentMethod { get; set; }
@@ -63,7 +63,11 @@ namespace DoAnTinHoc
             FrequencyOfPurchases = frequencyOfPurchases;
         }
 
-        public CustomerRecord() : this(0, 0, CGender.Female, "", "", 0, "", "", "", "", 0f, CSubscriptionStatus.No, "", CDiscountApplied.No, CPromoCodeUsed.No, 0, "", "")
+        public CustomerRecord() : this(0, 0, CGender.Female,
+                                        "", "", 0, "", "",
+                                        "", "", 0f, CSubscriptionStatus.No,
+                                        "", CDiscountApplied.No, CPromoCodeUsed.No,
+                                        0, "", "")
         {
         }
 

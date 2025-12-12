@@ -47,6 +47,9 @@ namespace DoAnTinHoc
             veCay.Show();
         }
 
-        
+        private void ChucNangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

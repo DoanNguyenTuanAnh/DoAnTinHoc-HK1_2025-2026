@@ -46,10 +46,8 @@ namespace DoAnTinHoc
                 dataAccess.getDanhSachCay().Add(currentTree);
 
             }
-
             // 2. Cấu hình DataGridView
             SetupDataGridView();
-
             // 3. Hiển thị dữ liệu ban đầu
             LoadDataToGrid();
         }
@@ -194,62 +192,7 @@ namespace DoAnTinHoc
                 lblSoNut.Text = "Tổng số Nút: 0";
             }
         }
-        private CustomerRecord CreateRecordFromInputs(bool isNewRecord)
-        {
-            if (!int.TryParse(txtID.Text, out int id))
-            {
-                MessageBox.Show("Mã KH phải là số nguyên hợp lệ.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
-            if (isNewRecord && id <= 0)
-            {
-                MessageBox.Show("Mã khách hàng phải là số nguyên dương.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
-            int age = 30;
-            CGender gender = CGender.Male; // Ví dụ: Enum.TryParse(cmbGender.Text, out gender);
-            string itemPurchased = "Item A"; // Ví dụ: txtItemPurchased.Text
-            string category = "Category X";
-            int purchaseAmount = 100; // Ví dụ: int.TryParse(txtAmount.Text, out purchaseAmount)
-            string location = "Hanoi";
-            string size = "M";
-            string color = "White";
-            string season = "All";
-            float reviewRating = 4.5f;
-            CSubscriptionStatus subStatus = CSubscriptionStatus.No;
-            string shippingType = "Standard";
-            CDiscountApplied discount = CDiscountApplied.No;
-            CPromoCodeUsed promo = CPromoCodeUsed.No;
-            int prevPurchases = 1;
-            string paymentMethod = "Credit Card";
-            string frequencyOfPurchases = "Quarterly";
-
-
-            CustomerRecord record = new CustomerRecord(
-              customerID: id,
-              age: age,
-              gender: gender,
-              itemPurchased: itemPurchased,
-              category: category,
-              purchaseAmount: purchaseAmount,
-              location: location,
-              size: size,
-              color: color,
-              season: season,
-              reviewRating: reviewRating,
-              subscriptionStatus: subStatus,
-              shippingType: shippingType,
-              discountApplied: discount,
-              promoCodeUsed: promo,
-              previousPurchases: prevPurchases,
-              paymentMethod: paymentMethod,
-              frequencyOfPurchases: frequencyOfPurchases
-            );
-
-            return record;
-        }
-
-
+       
 
         // ------------------- Các sự kiện chính -------------------
 
@@ -409,7 +352,7 @@ namespace DoAnTinHoc
 
         private void btnXuatTangK_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(txtTangK.Text, out int levelK) || levelK <= 0)
+            if (!int.TryParse(txtTangK.Text, out int levelK) || levelK < 0)
             {
                 MessageBox.Show("Vui lòng nhập tầng K là một số nguyên dương.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
