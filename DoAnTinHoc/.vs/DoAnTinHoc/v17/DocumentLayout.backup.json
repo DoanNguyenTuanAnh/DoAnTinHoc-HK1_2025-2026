@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\doantinhoc\\singlynode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\doantinhoc\\qlavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\qlavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\doantinhoc\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|c:\\github\\doannguyentuananh\\doantinhoc-hk1_2025-2026\\doantinhoc\\doantinhoc\\singlynode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\singlynode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -45,14 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\doantinhoc\\qldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\qldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|c:\\github\\doannguyentuananh\\doantinhoc-hk1_2025-2026\\doantinhoc\\doantinhoc\\qlavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\qlavl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\doantinhoc\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5E5081B1-6304-49A2-B602-C02E95C258CC}|DoAnTinHoc\\DoAnTinHoc.csproj|solutionrelative:doantinhoc\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,11 +62,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\DoAnTinHoc\\Form1.cs",
               "RelativeDocumentMoniker": "DoAnTinHoc\\Form1.cs",
@@ -79,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "QLAVL.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\DoAnTinHoc\\QLAVL.cs",
               "RelativeDocumentMoniker": "DoAnTinHoc\\QLAVL.cs",
@@ -92,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "QLData.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\DoAnTinHoc\\QLData.cs",
               "RelativeDocumentMoniker": "DoAnTinHoc\\QLData.cs",
@@ -100,12 +100,11 @@
               "RelativeToolTip": "DoAnTinHoc\\QLData.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T15:11:58.649Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "VeCay.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\DoAnTinHoc\\VeCay.cs",
               "RelativeDocumentMoniker": "DoAnTinHoc\\VeCay.cs",
@@ -113,12 +112,11 @@
               "RelativeToolTip": "DoAnTinHoc\\VeCay.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T15:27:30.3Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\DoAnTinHoc\\Form1.cs",
               "RelativeDocumentMoniker": "DoAnTinHoc\\Form1.cs",
@@ -132,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "QLAVL.cs",
               "DocumentMoniker": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\DoAnTinHoc\\QLAVL.cs",
               "RelativeDocumentMoniker": "DoAnTinHoc\\QLAVL.cs",
@@ -146,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "QLData.cs",
               "DocumentMoniker": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\DoAnTinHoc\\QLData.cs",
               "RelativeDocumentMoniker": "DoAnTinHoc\\QLData.cs",
@@ -155,12 +153,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T15:12:31.733Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "VeCay.cs",
               "DocumentMoniker": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\DoAnTinHoc\\VeCay.cs",
               "RelativeDocumentMoniker": "DoAnTinHoc\\VeCay.cs",
@@ -169,12 +166,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T15:27:40.953Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "CustomerRecord.cs",
               "DocumentMoniker": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\DoAnTinHoc\\CustomerRecord.cs",
               "RelativeDocumentMoniker": "DoAnTinHoc\\CustomerRecord.cs",
@@ -183,12 +179,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T12:44:35.085Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "TruyCap.cs",
               "DocumentMoniker": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\DoAnTinHoc\\TruyCap.cs",
               "RelativeDocumentMoniker": "DoAnTinHoc\\TruyCap.cs",
@@ -197,26 +192,24 @@
               "ViewState": "AgIAAFgAAAAAAAAAAAAAAHUAAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T14:53:37.843Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AVLTree.cs",
               "DocumentMoniker": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\DoAnTinHoc\\AVLTree.cs",
               "RelativeDocumentMoniker": "DoAnTinHoc\\AVLTree.cs",
-              "ToolTip": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\DoAnTinHoc\\AVLTree.cs*",
-              "RelativeToolTip": "DoAnTinHoc\\AVLTree.cs*",
+              "ToolTip": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\DoAnTinHoc\\AVLTree.cs",
+              "RelativeToolTip": "DoAnTinHoc\\AVLTree.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKkAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T12:44:57.914Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AVLNode.cs",
               "DocumentMoniker": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\DoAnTinHoc\\AVLNode.cs",
               "RelativeDocumentMoniker": "DoAnTinHoc\\AVLNode.cs",
@@ -225,12 +218,11 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T12:44:47.598Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "SinglyNode.cs",
               "DocumentMoniker": "C:\\GitHub\\DoanNguyenTuanAnh\\DoAnTinHoc-HK1_2025-2026\\DoAnTinHoc\\DoAnTinHoc\\SinglyNode.cs",
               "RelativeDocumentMoniker": "DoAnTinHoc\\SinglyNode.cs",
